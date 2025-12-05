@@ -38,8 +38,10 @@ pipeline {
             steps {
 
                     sh """
-                    docker build -t myapp/backend:${appVersion} 
-                    docker images                 """
+                    docker build -t myapp/backend:${appVersion} .
+                    docker images                 
+                    
+                    """
                     //error 'pipeline failed'
 
             }
