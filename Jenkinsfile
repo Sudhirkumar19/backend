@@ -33,13 +33,13 @@ pipeline {
                 sh 'env'
             }
         }
-        stage('Deploy') {
-            when {
-                expression { env.GIT_BRANCH != "origin/main" }
-            }
+        stage('Docker build') {
+            
             steps {
 
-                    sh 'echo This is deploy'
+                    sh """
+                    docker build -t myapp/backend:${appVersion} 
+                    docker images                 """
                     //error 'pipeline failed'
 
             }
