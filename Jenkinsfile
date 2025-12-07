@@ -42,7 +42,7 @@ pipeline {
                     docker images                 
                     
                     """
-                    //error 'pipeline failed'
+                    //error 'pipeline failed123'
 
             }
         }
